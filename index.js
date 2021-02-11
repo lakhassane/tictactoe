@@ -99,6 +99,9 @@ app.get("/play/", (req, res) => {
   console.log("spot: " + bestScore);
   arr[bestScore] = opponent;
   console.log("new Board", arr);
+
+  console.log(`${arr.join("")}`);
+  res.send(`${arr.join("")}`);
 });
 
 app.listen(port, hostname, () => {
